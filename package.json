@@ -6,8 +6,8 @@
   "scripts": {
     "test": "NODE_ENV=test ./node_modules/.bin/mocha **/**/*.test.js"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "zvdy",
+  "license": "MIT",
   "dependencies": {
     "axios": "^0.21.0",
     "bcrypt": "^5.0.0",
