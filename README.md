@@ -21,7 +21,9 @@ API to manage our pokemon team using Express & MongoDB database to store our dat
 - Switch Pokemon order on our team (PUT /team)
 - See our team (GET /team)
 - Authentication (POST /auth/login)
+
 ---
+
 - **Express** to create the server _npm install express_
 
 - **Mocha and Chai** for testing _npm install -D mocha chai_ then modify package.json to add the following scripts:
@@ -66,7 +68,9 @@ npm run test
 ```
 node app.js
 ```
+
 ---
+
 ## 📚Documentation
 - [Express](https://expressjs.com/)
 - [Mocha](https://mochajs.org/)
@@ -82,7 +86,14 @@ node app.js
 - [curl](https://curl.haxx.se/)
 - [MongoDB](https://www.mongodb.com/)
 - [NodeJS](https://nodejs.org/en/)
+
 ---
+
+## 📨 MongoDBAtlas example
+![alt](mongoDBAtlas.png)
+
+---
+
 ## 👨‍🏭TODO
 - [ ] Add a Frontend (React, ME**R**N Stack)
 - [ ] Add a Dockerfile to run the app in a container
@@ -90,7 +101,6 @@ node app.js
 - [ ] Add a CI/CD pipeline
 
 ---
+
 ## 📝License
 This project is under the MIT license. See the [LICENSE](LICENSE) file for more details.
-
-
