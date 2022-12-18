@@ -74,9 +74,6 @@ const setTeam = (userId, team) => {
     
 }
 
-
-
-
 exports.bootstrapTeam = bootstrapTeam;
 exports.addPokemon = addPokemon;
 exports.setTeam = setTeam;

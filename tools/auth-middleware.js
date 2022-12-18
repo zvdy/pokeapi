@@ -1,7 +1,6 @@
 const JwtStrategy = require('passport-jwt').Strategy,
     ExtractJwt = require('passport-jwt').ExtractJwt;
 const passport = require('passport');
-
 let secret = 'password'
 
 const init = () => {
