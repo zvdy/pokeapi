@@ -1,5 +1,6 @@
 const express = require('express');
 const middlewares = require('./middlewares');
+require ('./database');
 // Routes
 const authRoutes = require('./auth/auth.router').router;
 const teamsRoutes = require('./teams/teams.router').router;
@@ -16,7 +17,7 @@ app.use('/auth', authRoutes);
 app.use('/teams', teamsRoutes);
 
 app.listen(port, () => {
-    console.log('Server started at port 3000');
+    console.log('🌐 Server started at port 3000');
 })
 
 exports.app = app;

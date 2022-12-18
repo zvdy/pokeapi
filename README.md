@@ -1,20 +1,20 @@
-# Objetive
+# Pokemon API
 API to manage our pokemon team using Express & MongoDB database to store our data.
 
-### **MEN Stack**
+### 👨‍💻 **MEN Stack**
 
 - **M**ongoDB
 - **E**xpress
 - **N**odeJS
 
-# Actions to do
+# 🔨Actions to do
 - Identify ourselves
 - Add Pokemon to our team
 - Remove Pokemon from our team
 - Switch Pokemon order on our team
 - See our team
 
-# REST API Design
+# 📄REST API Design
 - Credentials System
 - Add Pokemon to out team (POST /team/pokemon)
 - Remove Pokemon from our team (DELETE /team/pokemon/:id)
@@ -43,9 +43,20 @@ API to manage our pokemon team using Express & MongoDB database to store our dat
 
 ---
 
-Use [Postman](https://www.getpostman.com/) to test the API
+Use [Postman Desktop](https://www.getpostman.com/) to test the API
 
-To run the tests use:
+Or use **_curl_** in the terminal
+
+---
+## 🔮Installation
+```
+npm install
+```
+### Run
+```
+npm start
+```
+### Test
 ```
 npm run test
 ```
