@@ -7,21 +7,19 @@ const teamsController = require('../teams.controller');
 
 const app = require('../../app').app;
 
-// Create a user and login before each test to get a valid token for the tests
-before((done) => {
-    usersController.registerUser('zvdy', '1234');
-    usersController.registerUser('ash', '4321');
-    done();
+beforeEach(async () => {
+    await usersController.registerUser('zvdy', '1234');
+    await usersController.registerUser('ash', '4321');
 })
 
-// Clean up the team after each test
 afterEach(async () => {
+    await usersController.cleanUpUsers();
     await teamsController.cleanUpTeam();
 })
 
 describe('🐉 Team Testing', () => {
     it('should return the team of the given user', (done) => {
-        // Cuando la llamada no tiene correctamente la llave
+        // When the user has a team
         let team = [{name: 'Charizard'}, {name: 'Blastoise'}, {name: 'Pikachu'}];
         chai.request(app)
             .post('/auth/login')
@@ -42,7 +40,7 @@ describe('🐉 Team Testing', () => {
                             .get('/teams')
                             .set('Authorization', `JWT ${token}`)
                             .end((err, res) => {
-                                // tiene equipo con Charizard y Blastoise
+                                // Charizard, Blastoise, Team
                                 // { trainer: 'ash', team: [Pokemon]}
                                 chai.assert.equal(res.statusCode, 200);
                                 chai.assert.equal(res.body.trainer, 'ash');
@@ -78,7 +76,7 @@ describe('🐉 Team Testing', () => {
                                     .get('/teams')
                                     .set('Authorization', `JWT ${token}`)
                                     .end((err, res) => {
-                                        // tiene equipo con Charizard y Blastoise
+                                        // Charizard, Blastoise, Team
                                         // { trainer: 'ash', team: [Pokemon]}
                                         chai.assert.equal(res.statusCode, 200);
                                         chai.assert.equal(res.body.trainer, 'ash');
@@ -91,7 +89,6 @@ describe('🐉 Team Testing', () => {
     });
 
     it('should remove the pokemon at index', (done) => {
-        // Cuando la llamada no tiene correctamente la llave
         let pokemonName = 'Bulbasaur';
         chai.request(app)
             .post('/auth/login')
@@ -110,7 +107,7 @@ describe('🐉 Team Testing', () => {
                             .get('/teams')
                             .set('Authorization', `JWT ${token}`)
                             .end((err, res) => {
-                                // tiene equipo con Charizard y Blastoise
+                                // Charizard, Blastoise, Team
                                 // { trainer: 'ash', team: [Pokemon]}
                                 chai.assert.equal(res.statusCode, 200);
                                 chai.assert.equal(res.body.trainer, 'ash');
@@ -156,9 +153,4 @@ describe('🐉 Team Testing', () => {
             });
     });
 
-});
-
-after((done) => {
-    usersController.cleanUpUsers();
-    done();
 });

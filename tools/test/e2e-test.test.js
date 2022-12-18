@@ -5,7 +5,7 @@ chai.use(chaiHttp);
 
 const app = require('../../app').app;
 
-describe('👋 End to End hello world test', () => {
+describe('S👋 End to End, Hello World! test', () => {
     it('should return hello world', (done) => {
         chai.request(app)
             .get('/')
