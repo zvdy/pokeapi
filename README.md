@@ -39,6 +39,8 @@ API to manage our pokemon team using Express & MongoDB database to store our dat
 
 - **Body-parser** to parse the body of the request _npm install body-parser_
 
+- **Axios** to make http requests _npm install axios_
+
 ---
 
 Use [Postman](https://www.getpostman.com/) to test the API
