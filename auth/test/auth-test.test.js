@@ -3,16 +3,22 @@ const chaiHttp = require('chai-http');
 
 chai.use(chaiHttp);
 const usersController = require('../users.controller');
+const teamsController = require('../../teams/teams.controller');
+
 const app = require('../../app').app;
 
-before((done) => {
-    usersController.registerUser('zvdy', '1234');
-    usersController.registerUser('ash', '4321');
-    done();
+beforeEach(async () => {
+    await usersController.registerUser('zvdy', '1234');
+    await usersController.registerUser('red', '4321');
 })
-describe('🔒 Auth Testing ', () => {
+
+afterEach(async () => {
+    await usersController.cleanUpUsers();
+    await teamsController.cleanUpTeam();
+});
+
+describe('🔒 Auth Testing', () => {
     it('should return 401 when no jwt token available', (done) => {
-        // 401 is the status code for unauthorized, so we expect this to fail if no token is provided
         chai.request(app)
             .get('/teams')
             .end((err, res) => {
@@ -47,7 +53,7 @@ describe('🔒 Auth Testing ', () => {
         chai.request(app)
             .post('/auth/login')
             .set('content-type', 'application/json')
-            .send({user: 'ash', password: '4321'})
+            .send({user: 'red', password: '4321'})
             .end((err, res) => {
                 //Expect valid login
                 chai.assert.equal(res.statusCode, 200);
@@ -62,7 +68,3 @@ describe('🔒 Auth Testing ', () => {
     });
 });
 
-after((done) => {
-    usersController.cleanUpUsers();
-    done();
-});

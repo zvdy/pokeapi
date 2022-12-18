@@ -20,13 +20,15 @@ API to manage our pokemon team using Express & MongoDB database to store our dat
 - Remove Pokemon from our team (DELETE /team/pokemon/:id)
 - Switch Pokemon order on our team (PUT /team)
 - See our team (GET /team)
+- Authentication (POST /auth/login)
 ---
 - **Express** to create the server _npm install express_
 
 - **Mocha and Chai** for testing _npm install -D mocha chai_ then modify package.json to add the following scripts:
 ```json
 "scripts": {
-    "test": "./node_modules/.bin/mocha"
+    "test": "NODE_ENV=test ./node_modules/.bin/mocha **/**/*.test.js"
+
   }
 ``` 
 - **bcrypt** to encrypt the password _npm install bcrypt_
@@ -60,6 +62,35 @@ npm start
 ```
 npm run test
 ```
+### Execute production server
+```
+node app.js
+```
+---
+## 📚Documentation
+- [Express](https://expressjs.com/)
+- [Mocha](https://mochajs.org/)
+- [Chai](https://www.chaijs.com/)
+- [bcrypt](https://www.npmjs.com/package/bcrypt)
+- [uuid](https://www.npmjs.com/package/uuid)
+- [Passport](http://www.passportjs.org/)
+- [Mongoose](https://mongoosejs.com/)
+- [Body-parser](https://www.npmjs.com/package/body-parser)
+- [Axios](https://www.npmjs.com/package/axios)
+- [Postman Desktop](https://www.getpostman.com/)
+- [jwt debugger](jwt.io/#debugger-io)
+- [curl](https://curl.haxx.se/)
+- [MongoDB](https://www.mongodb.com/)
+- [NodeJS](https://nodejs.org/en/)
+---
+## 👨‍🏭TODO
+- [ ] Add a Frontend (React, ME**R**N Stack)
+- [ ] Add a Dockerfile to run the app in a container
+- [ ] Add a docker-compose.yml to run the app with a MongoDB container
+- [ ] Add a CI/CD pipeline
 
+---
+## 📝License
+This project is under the MIT license. See the [LICENSE](LICENSE) file for more details.
 
 
