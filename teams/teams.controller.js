@@ -74,6 +74,18 @@ const setTeam = (userId, team) => {
     
 }
 
+// add pokemon to team of userID's
+/*
+addPokemon('c4134c5e-e2e4-489f-9aa3-6fca5abbe662', { name: 'Pikachu', level: 5 })
+    .then(() => {
+        console.log('Pokemon added');
+    })
+    .catch((err) => {
+        console.log(err);
+    });
+*/
+
+
 exports.bootstrapTeam = bootstrapTeam;
 exports.addPokemon = addPokemon;
 exports.setTeam = setTeam;

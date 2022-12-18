@@ -66,6 +66,23 @@ const checkUserCredentials = (userName, password) => {
         }
     });
 }
+
+// To acces production database and register a sample user:
+/*
+registerUser('zvdy', '1234').then(() => {
+    console.log('User zvdy registered ✅');
+}).catch((err) => {
+    console.log(err);
+});
+
+registerUser('ash', '4321').then(() => {
+    console.log('User ash registered ✅');
+}).catch((err) => {
+    console.log(err);
+});
+*/
+
+
 exports.registerUser = registerUser;
 exports.checkUserCredentials = checkUserCredentials;
 exports.getUserIdFromUserName = getUserIdFromUserName;
