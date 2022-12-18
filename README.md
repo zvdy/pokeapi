@@ -22,7 +22,6 @@ API to manage our pokemon team using Express & MongoDB database to store our dat
 - See our team (GET /team)
 - Authentication (POST /auth/login)
 
----
 
 - **Express** to create the server _npm install express_
 
@@ -45,14 +44,12 @@ API to manage our pokemon team using Express & MongoDB database to store our dat
 
 - **Axios** to make http requests _npm install axios_
 
----
 
 Use [Postman Desktop](https://www.getpostman.com/) to test the API
 
 Or use **_curl_** in the terminal
 
----
-## 🔮Installation
+# 🔮Installation
 ```
 npm install
 ```
@@ -69,9 +66,8 @@ npm run test
 node app.js
 ```
 
----
 
-## 📚Documentation
+# 📚Documentation
 - [Express](https://expressjs.com/)
 - [Mocha](https://mochajs.org/)
 - [Chai](https://www.chaijs.com/)
@@ -87,14 +83,12 @@ node app.js
 - [MongoDB](https://www.mongodb.com/)
 - [NodeJS](https://nodejs.org/en/)
 
----
 
-## 📨 MongoDBAtlas example
+# 📨 MongoDBAtlas example
 ![alt](mongoDBAtlas.png)
 
----
 
-## 👨‍🏭TODO
+## 👨‍🏭 _TODO_
 - [ ] Add a Frontend (React, ME**R**N Stack)
 - [ ] Add a Dockerfile to run the app in a container
 - [ ] Add a docker-compose.yml to run the app with a MongoDB container
