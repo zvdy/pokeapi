@@ -78,7 +78,7 @@ node app.js
 - [Body-parser](https://www.npmjs.com/package/body-parser)
 - [Axios](https://www.npmjs.com/package/axios)
 - [Postman Desktop](https://www.getpostman.com/)
-- [jwt debugger](jwt.io/#debugger-io)
+- [jwt debugger](https://jwt.io/)
 - [curl](https://curl.haxx.se/)
 - [MongoDB](https://www.mongodb.com/)
 - [NodeJS](https://nodejs.org/en/)
